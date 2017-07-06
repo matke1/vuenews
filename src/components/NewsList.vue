@@ -37,7 +37,7 @@
 
     methods:{
         updateSource:function (source) {
-          this.$http.get('https://newsapi.org/v1/articles?source='+source+'apiKey=0954d6e56c904b9096087f30496f33e8')
+          this.$http.get('https://newsapi.org/v1/articles?source='+source+'&apiKey=ed33c6a58a0b4183827d9b8e9519cfd0')
             .then(response => {
                 this.articles = response.data.articles;
             });

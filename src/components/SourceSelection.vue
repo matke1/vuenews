@@ -30,7 +30,7 @@
       },
     methods:{
           sourceChanged:function (e) {
-            for (var i=0; i<this.sources.length;i++){
+            for ( i=0; i<this.sources.length;i++){
                 if(this.sources[i].id === e.target.value){
                     this.source = this.sources[i];
                 }
