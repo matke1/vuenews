@@ -38,7 +38,7 @@
       }
     },
     created: function () {
-      this.$http.get('https://newsapi.org/v1/sources?language=en')
+      this.$http.get('https://newsapi.org/v1/sources?country=us')
         .then(response => {
           this.sources = response.data.sources;
         });
