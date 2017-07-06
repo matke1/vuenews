@@ -20,6 +20,8 @@
 
 
 <script>
+  import Newslist from './Newslist.vue'
+
   export default{
       name:'sourceselection',
       data(){
@@ -43,8 +45,8 @@
         .then(response => {
             this.sources = response.data.sources;
         });
-    }
-  }
+      }
+   }
 </script>
 
 <style scoped>
