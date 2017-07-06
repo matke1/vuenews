@@ -29,7 +29,7 @@
     },
     methods: {
       sourceChanged: function(e) {
-        for (let i=0; i<this.sources.length; i++) {
+        for (var i=0; i<this.sources.length; i++) {
           if (this.sources[i].id === e.target.value) {
             this.source = this.sources[i];
           }
@@ -38,7 +38,7 @@
       }
     },
     created: function () {
-      this.$http.get('https://newsapi.org/v1/sources?country=us')
+      this.$http.get('https://newsapi.org/v1/sources?language=en')
         .then(response => {
           this.sources = response.data.sources;
         });
