@@ -22,6 +22,7 @@
     methods: {
       sourceChanged: function (source) {
         this.source = source;
+        console.log(source)
       }
     }
   }

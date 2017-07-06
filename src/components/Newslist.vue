@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div class="newslist">
     <div class="container">
@@ -34,12 +35,13 @@
       updateSource: function (source) {
         this.$http.get('https://newsapi.org/v1/articles?source='+source+'&apiKey=3e2c1cff66024db187364fa30ac21085')
           .then(response => {
-            this.articles = source.data.article;
+            this.articles = source.data.articles;
+
           });
       }
     },
     created: function () {
-      this.updateSource(this.source);
+//      this.updateSource(this.source);
     },
     watch: {
       source: function (val) {
