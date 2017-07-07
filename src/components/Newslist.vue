@@ -1,6 +1,7 @@
 <template>
   <div class="newslist">
     <div class="container">
+
       <ul class="media-list">
         <li class="media" v-for="article in articles">
           <div class="media-left">
@@ -15,10 +16,10 @@
           </div>
         </li>
       </ul>
+
     </div>
   </div>
 </template>
-
 
 <script>
   export default {
@@ -31,15 +32,14 @@
     },
     methods: {
       updateSource: function (source) {
-        this.$http.get('https://newsapi.org/v1/articles?source='+source+'&apiKey=3e2c1cff66024db187364fa30ac21085')
+        this.$http.get('https://newsapi.org/v1/articles?source=' + source + '&apiKey=9d0bd4eff53547ce8cb0b46293bcc14e')
           .then(response => {
             this.articles = response.data.articles;
-
           });
       }
     },
     created: function () {
-      //this.updateSource(this.source);
+      this.updateSource(this.source);
     },
     watch: {
       source: function (val) {
@@ -48,6 +48,7 @@
     }
   }
 </script>
+
 
 <style scoped>
   .media-object {
